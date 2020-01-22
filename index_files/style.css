@@ -1,0 +1,167 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr,
+acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong,
+sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video 
+{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+html {box-sizing: border-box;} *, *:before, *:after {box-sizing: inherit;}
+
+body {
+	background: url(../images/bg.png) repeat; /* Фон всей страницы */
+	font: 400 26px/36px 'Yanone Kaffeesatz', sans-serif; /* Наименование шрифта 'Roboto' - общий для всех элементов */
+	color: #000;
+}
+
+a {
+	color: #289cfb; /* Цвет ссылок */
+	text-decoration: underline; /* Подчеркивание ссылки, если не надо поставить none*/
+	outline: none;
+	transition: all .25s ease;
+}
+
+a:hover {
+	color: #f02525; /* меняет цвет ссылки при наведении мышки */
+	text-decoration: none; /* и убирается подчеркивание */
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1000px; /* максимальный размер контента в пикселях */
+	min-width: 300px;
+	margin: 0 auto;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header > .wrapper {
+	position: relative;
+	height: 400px; /* высота картинки в шапке */
+	background: url(../images/111.jpg) center no-repeat; /*сама картинка в шапке */ 
+	background-size: cover;
+	border-top: 5px solid #eee; /* бордер вверху шапки (толщина, тип(сплошная линия), цвет) */
+}
+
+header h1 {/* заголовок в шапке */
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+	padding: 20px;
+	
+	text-transform: uppercase; /* верхний регистр букв, если не нужен - удалить */
+	font-size: 50px; /* размер шрифта */
+	line-height: 40px; /* отступы между строк */
+	color: #fff; /* цвет шрифта */
+	
+	background: rgba(130,200,100,.7); /* фон, где 0,0,0 это черный цвет, а .5 - прозрачность 50% */
+	border-radius: 5px;
+}
+
+article {
+	background: #fff; /* фон статьи*/
+	padding: 30px 30px 30px 60px;
+	border: 5px solid #eee; /* бордер вокруг статьи */
+}
+
+article .meta { /*описание статьи*/
+	padding: 10px 0;
+	margin-bottom: 20px;
+	
+	font-size: 14px; /* размер шрифта */
+	color: #999; /* цвет шрифта */
+	border-bottom: 1px solid #eee; /* бордер снизу */
+}
+
+article p { /* параграфы в статье */
+	display: block;
+	margin-bottom: 20px;
+	
+	font-size: 22px; /* размер шрифта */
+	line-height: 36px; /* отступы между строк */
+	color: #000; /* цвет шрифта */
+	
+	text-align: justify; /* выравнивание текста 'по ширине' */
+}
+
+article h2 { /* заголовки в статье */
+	display: block;
+	position: relative;
+	padding-left: 20px;
+	margin: 50px 0 10px;
+	
+	text-transform: uppercase; /* верхний регистр букв */
+	font-size: 50px; /* размер шрифта */
+	line-height: 45px; /* отступы между строк */
+	color: #19c211; /* цвет шрифта */
+	clear: both;
+	
+}
+
+article h2:before { /* плашка слева от заголовка в статье */
+	position: absolute;
+	top: -3px;
+	left: 0;
+	display: block;
+	content: '';
+	width: 8px; /* ширина */
+	height: 45px; /* высота */
+	background-color: #19c211; /* красный цвет */
+}
+
+article i {
+	font-style: italic;
+}
+
+article strong {
+	font-weight: 700;
+	color: #111; /* цвет жирного текста в статье */
+}
+
+article ul, article ol {
+	display: block;
+	margin: 30px 50px;
+}
+
+article ul li, article ol li {
+	padding-bottom: 15px;
+}
+
+article ul.list {
+	list-style: outside disc;
+}
+
+article ol.list {
+	list-style: outside decimal;
+}
+
+article img.img { /* картинки в статье с классом img */
+	display: block;
+	width: 100%;
+	margin: 20px 0;
+	background: #fff; /* фон между картинкой и бордером */
+	padding: 10px; /* отступ в 10px вокруг картинки */
+	border: 1px solid #f0f0f0; /* бордер вокруг картинки */
+}
+
+article img.alignleft { /* картинки в статье с классом img */
+	display: block;
+	margin: 0 10px 10px;
+	background: #fff; /* фон между картинкой и бордером */
+	padding: 10px; /* отступ в 10px вокруг картинки */
+	border: 1px solid #f0f0f0; /* бордер вокруг картинки */
+	float: left;
+}
+
+footer { /* футер */
+	margin-top: 50px;
+	padding: 20px 0;
+	text-align: center; /* выравнивание по центру */
+	font-size: 14px; /* размер шрифта */
+	color: #999; /* цвет шрифта */
+}
